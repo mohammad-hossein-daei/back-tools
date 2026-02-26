@@ -55,20 +55,23 @@ python(version) main.py examples/context_order_1.json examples/rules.json
 
 
 ## Supported Operators
-Operator    Description
-==	        Equal to
-!=	        Not equal to
->	        Greater than
->=	        Greater than or equal to
-<	        Less than
-<=	        Less than or equal to
 
+| Operator | Description |
+|----------|-------------|
+| `==`     | Equal to |
+| `!=`     | Not equal to |
+| `>`      | Greater than |
+| `>=`     | Greater than or equal to |
+| `<`      | Less than |
+| `<=`     | Less than or equal to |
+
+---
 
 ## Supported Actions
-______________________________________________________________________
-|Action	                |Description                                  |
-|apply_discount_percent	|Apply a percentage discount to the cart total|
-|free_shipping	        |Enable free shipping for the order           |
-|block_payment       	|Block the payment completely with a reason   |
-|block_payment_method	|Block a specific payment method              |
-|_____________________________________________________________________|
+
+| Action | Description |
+|--------|-------------|
+| `apply_discount_percent` | Apply a percentage discount to the cart total |
+| `free_shipping`          | Enable free shipping for the order |
+| `block_payment`          | Block the payment completely with a reason |
+| `block_payment_method`   | Block a specific payment method |
