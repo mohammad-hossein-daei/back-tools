@@ -1,0 +1,9 @@
+{
+    "user_type": "old",
+    "cart_total": 3000000,
+    "items_count": 6,
+    "city": "tehran",
+    "payment_method": "cod",
+    "has_previous_chargeback": false,
+    "gateway": "zarinpal"
+}

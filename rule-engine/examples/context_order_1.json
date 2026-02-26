@@ -1,0 +1,9 @@
+{
+    "user_type": "new",
+    "cart_total": 1250000,
+    "items_count": 3,
+    "city": "tehran",
+    "payment_method": "online",
+    "has_previous_chargeback": false,
+    "gateway": "zarinpal"
+}

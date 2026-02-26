@@ -1,0 +1,76 @@
+[
+    {
+        "id": "D1",
+        "description": "New user + cart_total > 1,000,000 => 10% discount",
+        "priority": 10,
+        "when": [
+            {
+                "field": "user_type",
+                "op": "==",
+                "value": "new"
+            },
+            {
+                "field": "cart_total",
+                "op": ">",
+                "value": 1000000
+            }
+        ],
+        "then": {
+            "action": "apply_discount_percent",
+            "value": 10
+        }
+    },
+    {
+        "id": "D2",
+        "description": "If items_count >= 5 => free shipping",
+        "priority": 20,
+        "when": [
+            {
+                "field": "items_count",
+                "op": ">=",
+                "value": 5
+            }
+        ],
+        "then": {
+            "action": "free_shipping",
+            "value": true
+        }
+    },
+    {
+        "id": "P1",
+        "description": "If has_previous_chargeback => block payment",
+        "priority": 5,
+        "when": [
+            {
+                "field": "has_previous_chargeback",
+                "op": "==",
+                "value": true
+            }
+        ],
+        "then": {
+            "action": "block_payment",
+            "value": "chargeback_risk"
+        }
+    },
+    {
+        "id": "P2",
+        "description": "If payment_method is COD and cart_total > 2,000,000 => block COD",
+        "priority": 15,
+        "when": [
+            {
+                "field": "payment_method",
+                "op": "==",
+                "value": "cod"
+            },
+            {
+                "field": "cart_total",
+                "op": ">",
+                "value": 2000000
+            }
+        ],
+        "then": {
+            "action": "block_payment_method",
+            "value": "cod"
+        }
+    }
+]
